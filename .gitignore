@@ -25,7 +25,7 @@ yarn-error.log
 *.wpress
 *.zip
 
-نوتس.txt
-بوست تاسكس.md
+handover_notes.txt
+post_handover_tasks.md
 debug.log
 *.log
