@@ -1,0 +1,93 @@
+/**
+ * Universal Editor Styles
+ * Works on any design, any theme, any structure
+ *
+ * @package SME_Insights
+ * @since 1.0.0
+ */
+
+/* Universal Editor UI */
+.sme-universal-editor-enabled {
+	position: relative;
+}
+
+/* Editor Panel */
+.sme-universal-editor-panel {
+	position: fixed;
+	top: 0;
+	right: -400px;
+	width: 400px;
+	height: 100vh;
+	background: #fff;
+	box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+	z-index: 999999;
+	transition: right 0.3s ease;
+	overflow-y: auto;
+}
+
+.sme-universal-editor-panel.active {
+	right: 0;
+}
+
+/* Element Highlighter */
+.sme-element-highlighter {
+	position: absolute;
+	border: 2px dashed #0073aa;
+	background: rgba(0, 115, 170, 0.1);
+	pointer-events: none;
+	z-index: 999998;
+	display: none;
+}
+
+.sme-element-highlighter.active {
+	display: block;
+}
+
+/* Edit Button */
+.sme-edit-button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #0073aa;
+	color: #fff;
+	border: none;
+	padding: 12px 24px;
+	border-radius: 4px;
+	cursor: pointer;
+	z-index: 999997;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+	transition: all 0.3s ease;
+}
+
+.sme-edit-button:hover {
+	background: #005a87;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Universal Selectors - Ensure styles apply */
+body.sme-universal-editor-enabled [data-sme-element="header"],
+body.sme-universal-editor-enabled [data-sme-element-type="header"],
+body.sme-universal-editor-enabled [data-sme-editable="header"],
+body.sme-has-header > header:first-of-type,
+body.sme-has-header > .header:first-of-type {
+	/* Styles will be injected here */
+}
+
+body.sme-universal-editor-enabled [data-sme-element="footer"],
+body.sme-universal-editor-enabled [data-sme-element-type="footer"],
+body.sme-universal-editor-enabled [data-sme-editable="footer"],
+body.sme-has-footer > footer:last-of-type,
+body.sme-has-footer > .footer:last-of-type {
+	/* Styles will be injected here */
+}
+
+body.sme-universal-editor-enabled [data-sme-element="page"],
+body.sme-universal-editor-enabled [data-sme-editable="page"],
+body.sme-page-editable,
+body.sme-single-editable,
+body.sme-category-editable,
+body.sme-archive-editable {
+	/* Styles will be injected here */
+}
+

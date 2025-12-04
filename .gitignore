@@ -1,0 +1,26 @@
+# WordPress Core
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+*.log
+.htaccess
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Node/Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+*.wpress
+*.zip

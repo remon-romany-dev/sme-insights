@@ -1,0 +1,108 @@
+/**
+ * Template Customizer Admin Styles
+ *
+ * @package SME_Insights
+ * @since 1.0.0
+ */
+
+.sme-template-customizer-wrap {
+    max-width: 1200px;
+}
+
+.sme-template-customizer-wrap .description {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.sme-customizer-content {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.sme-settings-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sme-settings-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sme-settings-section h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.sme-settings-section .form-table {
+    margin-top: 0;
+}
+
+.sme-settings-section .form-table th {
+    width: 200px;
+    font-weight: 600;
+}
+
+.sme-settings-section .form-table td {
+    padding: 15px 10px;
+}
+
+.sme-color-picker {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #8c8f94;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sme-color-picker + .description {
+    margin-left: 10px;
+}
+
+.nav-tab-wrapper {
+    margin-bottom: 0;
+    border-bottom: 1px solid #ccd0d4;
+}
+
+.nav-tab {
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.nav-tab-active {
+    background: #fff;
+    border-bottom-color: #fff;
+}
+
+.submit {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.notice {
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .sme-settings-section .form-table th {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .sme-settings-section .form-table td {
+        display: block;
+        padding: 5px 0 15px 0;
+    }
+}
+

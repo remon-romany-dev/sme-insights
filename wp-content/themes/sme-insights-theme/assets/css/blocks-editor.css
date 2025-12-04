@@ -1,0 +1,458 @@
+/**
+ * Gutenberg Blocks Editor Styles
+ * Styles for custom blocks in the editor
+ * This file makes the editor look like the actual page design
+ *
+ * @package SME_Insights
+ * @since 1.0.0
+ */
+
+/* Import theme CSS variables */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f7fafc;
+    --bg-card: #ffffff;
+    --bg-dark: #1a365d;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-light: #718096;
+    --accent-primary: #1a365d;
+    --accent-secondary: #2563eb;
+    --accent-hover: #1e40af;
+    --border-color: #e2e8f0;
+    --breaking-gradient: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+}
+
+/* Editor Body - Match Theme Design - Full Page View */
+.editor-styles-wrapper {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+    line-height: 1.6 !important;
+    color: var(--text-primary) !important;
+    background-color: var(--bg-primary) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+}
+
+/* Editor Post Content - Match Frontend Layout */
+.editor-styles-wrapper .editor-post-text-editor,
+.editor-styles-wrapper .block-editor-block-list__layout {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Match main content layout - Full Width */
+.editor-styles-wrapper .wp-block {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+
+/* Container matching - Match Frontend */
+.editor-styles-wrapper .container,
+.editor-styles-wrapper .container-inner {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    width: 100% !important;
+}
+
+/* Main content area - Match Frontend */
+.editor-styles-wrapper .main-content-layout,
+.editor-styles-wrapper .main-content-area {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Entry content - Match Frontend */
+.editor-styles-wrapper .entry-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Headings - Match Theme Style */
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    color: var(--text-primary) !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    margin-top: 1.5em !important;
+    margin-bottom: 0.75em !important;
+}
+
+.editor-styles-wrapper h1 {
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+}
+
+.editor-styles-wrapper h2 {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+}
+
+.editor-styles-wrapper h3 {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+}
+
+/* Paragraphs - Match Theme Style */
+.editor-styles-wrapper p {
+    color: var(--text-secondary) !important;
+    line-height: 1.8 !important;
+    margin-bottom: 1.5em !important;
+    font-size: 1.1rem !important;
+}
+
+/* Lists - Match Theme Style */
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+    color: var(--text-secondary) !important;
+    line-height: 1.8 !important;
+    margin-bottom: 1.5em !important;
+    padding-left: 2em !important;
+}
+
+.editor-styles-wrapper li {
+    margin-bottom: 0.5em !important;
+}
+
+/* Links - Match Theme Style */
+.editor-styles-wrapper a {
+    color: var(--accent-secondary) !important;
+    text-decoration: none !important;
+    transition: color 0.3s !important;
+}
+
+.editor-styles-wrapper a:hover {
+    color: var(--accent-hover) !important;
+    text-decoration: underline !important;
+}
+
+/* Block Quotes - Match Theme Style */
+.editor-styles-wrapper blockquote {
+    border-left: 4px solid var(--accent-secondary) !important;
+    padding-left: 1.5em !important;
+    margin: 1.5em 0 !important;
+    color: var(--text-secondary) !important;
+    font-style: italic !important;
+}
+
+/* Code Blocks - Match Theme Style */
+.editor-styles-wrapper code {
+    background: var(--bg-secondary) !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    font-size: 0.9em !important;
+}
+
+.editor-styles-wrapper pre {
+    background: var(--bg-secondary) !important;
+    padding: 1em !important;
+    border-radius: 8px !important;
+    overflow-x: auto !important;
+}
+
+/* Images - Match Theme Style */
+.editor-styles-wrapper img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+}
+
+/* Buttons - Match Theme Style */
+.editor-styles-wrapper .wp-block-button__link {
+    background: var(--accent-secondary) !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.3s !important;
+}
+
+.editor-styles-wrapper .wp-block-button__link:hover {
+    background: var(--accent-hover) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Columns - Match Theme Style */
+.editor-styles-wrapper .wp-block-columns {
+    gap: 30px !important;
+}
+
+/* Cover Block - Match Theme Style */
+.editor-styles-wrapper .wp-block-cover {
+    min-height: 400px !important;
+    border-radius: 12px !important;
+}
+
+/* Group Block - Match Theme Style */
+.editor-styles-wrapper .wp-block-group {
+    padding: 40px 20px !important;
+}
+
+/* Sections with Background - Match About Page Design */
+.editor-styles-wrapper section {
+    margin-bottom: 80px !important;
+    padding: 60px !important;
+    background: var(--bg-secondary) !important;
+    border-radius: 12px !important;
+}
+
+/* Center-aligned Content - Match About Page */
+.editor-styles-wrapper .wp-block-group[style*="text-align: center"],
+.editor-styles-wrapper .wp-block-group[style*="margin-left: auto"],
+.editor-styles-wrapper .wp-block-group[style*="margin-right: auto"] {
+    text-align: center !important;
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Better spacing for headings in editor */
+.editor-styles-wrapper h2 {
+    margin-top: 2em !important;
+    margin-bottom: 1em !important;
+}
+
+/* Enhanced paragraph styling for About page */
+.editor-styles-wrapper .entry-content p {
+    font-size: 1.2rem !important;
+    line-height: 1.9 !important;
+    color: var(--text-secondary) !important;
+    text-align: center !important;
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 1.5em !important;
+}
+
+/* List styling for About page */
+.editor-styles-wrapper .entry-content ul,
+.editor-styles-wrapper .entry-content ol {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: left !important;
+}
+
+/* Full Page Design - Match Frontend Exactly */
+.editor-styles-wrapper .wp-block-group {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Sections with background colors */
+.editor-styles-wrapper .wp-block-group.has-background {
+    padding: 60px 20px !important;
+    margin-bottom: 80px !important;
+    border-radius: 12px !important;
+}
+
+/* Columns layout */
+.editor-styles-wrapper .wp-block-columns {
+    gap: 30px !important;
+    margin-bottom: 40px !important;
+}
+
+/* Images in editor */
+.editor-styles-wrapper .wp-block-image img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Buttons styling */
+.editor-styles-wrapper .wp-block-button {
+    margin: 10px 5px !important;
+}
+
+.editor-styles-wrapper .wp-block-button__link {
+    display: inline-block !important;
+    padding: 15px 35px !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    text-decoration: none !important;
+    transition: all 0.3s !important;
+}
+
+/* Cover blocks */
+.editor-styles-wrapper .wp-block-cover {
+    min-height: 400px !important;
+    border-radius: 12px !important;
+    margin-bottom: 40px !important;
+}
+
+/* Spacer blocks */
+.editor-styles-wrapper .wp-block-spacer {
+    margin: 0 !important;
+}
+
+/* Ensure all blocks are visible with proper styling */
+.editor-styles-wrapper * {
+    box-sizing: border-box !important;
+}
+
+/* Import ALL main.css styles into editor - Full Design Match */
+.editor-styles-wrapper {
+    /* Import all main.css variables and styles */
+    /* This ensures the editor looks exactly like the frontend */
+}
+
+/* Match all frontend styles in editor */
+.editor-styles-wrapper .wp-block-group.has-background-background-color {
+    background: var(--bg-secondary) !important;
+}
+
+.editor-styles-wrapper .wp-block-group.has-breaking-gradient-gradient-background {
+    background: var(--breaking-gradient) !important;
+    color: #fff !important;
+}
+
+.editor-styles-wrapper .wp-block-group.has-breaking-gradient-gradient-background h2,
+.editor-styles-wrapper .wp-block-group.has-breaking-gradient-gradient-background p {
+    color: #fff !important;
+}
+
+/* Center aligned content */
+.editor-styles-wrapper .has-text-align-center {
+    text-align: center !important;
+}
+
+/* Full width blocks */
+.editor-styles-wrapper .alignfull {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+}
+
+.editor-styles-wrapper .alignwide {
+    max-width: 1400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Better visual representation in editor */
+.editor-styles-wrapper .wp-block-column {
+    padding: 20px !important;
+    background: var(--bg-card) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    margin-bottom: 20px !important;
+}
+
+/* Separator - Match Theme Style */
+.editor-styles-wrapper .wp-block-separator {
+    border-color: var(--border-color) !important;
+    margin: 2em 0 !important;
+}
+
+/* Block Placeholders - Enhanced Styling */
+.sme-posts-grid-block,
+.sme-category-hero-block,
+.sme-featured-article-block,
+.sme-sub-topics-bar-block,
+.sme-popular-articles-block {
+	padding: 30px 20px;
+	background: linear-gradient(135deg, #f0f0f1 0%, #e8e8e9 100%);
+	border: 2px dashed #8c8f94;
+	border-radius: 8px;
+	text-align: center;
+	color: #1d2327;
+	font-weight: 600;
+	font-size: 14px;
+	min-height: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.sme-posts-grid-block:hover,
+.sme-category-hero-block:hover,
+.sme-featured-article-block:hover,
+.sme-sub-topics-bar-block:hover,
+.sme-popular-articles-block:hover {
+	background: linear-gradient(135deg, #e8e8e9 0%, #e0e0e1 100%);
+	border-color: #2563eb;
+	box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+.sme-posts-grid-block::before {
+	content: "📊";
+	font-size: 2.5rem;
+	display: block;
+	margin-bottom: 12px;
+	line-height: 1;
+}
+
+.sme-category-hero-block::before {
+	content: "🏆";
+	font-size: 2.5rem;
+	display: block;
+	margin-bottom: 12px;
+	line-height: 1;
+}
+
+.sme-featured-article-block::before {
+	content: "✨";
+	font-size: 2.5rem;
+	display: block;
+	margin-bottom: 12px;
+	line-height: 1;
+}
+
+.sme-sub-topics-bar-block::before {
+	content: "🏷️";
+	font-size: 2.5rem;
+	display: block;
+	margin-bottom: 12px;
+	line-height: 1;
+}
+
+.sme-popular-articles-block::before {
+	content: "📈";
+	font-size: 2.5rem;
+	display: block;
+	margin-bottom: 12px;
+	line-height: 1;
+}
+
+/* Block description text */
+.sme-posts-grid-block p,
+.sme-category-hero-block p,
+.sme-featured-article-block p,
+.sme-sub-topics-bar-block p,
+.sme-popular-articles-block p {
+	margin: 0;
+	font-size: 13px;
+	color: #50575e;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+/* Block title styling */
+.sme-posts-grid-block > *:not(::before),
+.sme-category-hero-block > *:not(::before),
+.sme-featured-article-block > *:not(::before),
+.sme-sub-topics-bar-block > *:not(::before),
+.sme-popular-articles-block > *:not(::before) {
+	margin-top: 8px;
+}
+

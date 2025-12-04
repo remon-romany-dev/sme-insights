@@ -1,0 +1,31 @@
+/**
+ * Visual Editor Admin Styles
+ * Styles for admin/editor interface
+ *
+ * @package SME_Insights
+ * @since 1.0.0
+ */
+
+/* Editor enhancements */
+.block-editor-writing-flow {
+    position: relative;
+}
+
+/* Visual editor indicators */
+.sme-editable-indicator {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #2563eb;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 11px;
+    border-radius: 4px;
+    z-index: 10;
+    display: none;
+}
+
+.block-editor-block-list__block:hover .sme-editable-indicator {
+    display: block;
+}
+

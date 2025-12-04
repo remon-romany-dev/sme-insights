@@ -1,0 +1,30 @@
+/*
+Theme Name: SME Insights
+Theme URI: https://smeinsights.com
+Author: Remon Romany
+Author URI: https://prortec.com/remon-romany/
+Description: Professional WordPress theme for Small and Medium Enterprise news and insights. Features custom post types, flexible content management, SEO optimization, and a built-in page builder system. Follows WordPress coding standards and best practices.
+Version: 1.1.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sme-insights
+Domain Path: /languages
+Tags: news, business, blog, custom-post-types, flexible-content, seo-ready, performance-focused, responsive-design, accessibility-ready, translation-ready
+
+Developer: Remon Romany
+Developer Title: Senior Strategic Web Developer
+Developer Portfolio: https://prortec.com/remon-romany/
+
+This file is required by WordPress for theme identification.
+All styles are loaded from assets/css/main.css
+
+WordPress Best Practices:
+- Security: Input sanitization, output escaping, nonce verification
+- Performance: Optimized queries, caching, lazy loading
+- Accessibility: ARIA labels, semantic HTML, keyboard navigation
+- Internationalization: All strings are translatable
+- Code Quality: WordPress Coding Standards compliant
+*/

@@ -1,0 +1,131 @@
+/**
+ * Page Builder Blocks Frontend Styles
+ *
+ * @package SME_Insights
+ * @since 1.0.0
+ */
+
+/* Text Block */
+.sme-text-block {
+    margin: 0;
+    padding: 0;
+}
+
+/* Image Block */
+.sme-image-block {
+    margin: 20px 0;
+}
+
+.sme-image-block.align-left {
+    text-align: left;
+}
+
+.sme-image-block.align-center {
+    text-align: center;
+}
+
+.sme-image-block.align-right {
+    text-align: right;
+}
+
+.sme-image-block img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Button Block */
+.sme-button-block {
+    margin: 20px 0;
+}
+
+.sme-button-block.align-left {
+    text-align: left;
+}
+
+.sme-button-block.align-center {
+    text-align: center;
+}
+
+.sme-button-block.align-right {
+    text-align: right;
+}
+
+.sme-button {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.sme-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Columns Block */
+.sme-columns-block {
+    margin: 20px 0;
+}
+
+.sme-column {
+    padding: 15px;
+}
+
+/* Hero Block */
+.sme-hero-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sme-hero-title {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sme-hero-subtitle {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Spacer Block */
+.sme-spacer-block {
+    width: 100%;
+    display: block;
+}
+
+/* Divider Block */
+.sme-divider-block {
+    margin: 20px auto;
+    display: block;
+}
+
+/* HTML Block */
+.sme-html-block {
+    margin: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sme-hero-title {
+        font-size: 32px;
+    }
+    
+    .sme-hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .sme-columns-block {
+        grid-template-columns: 1fr !important;
+    }
+}
+

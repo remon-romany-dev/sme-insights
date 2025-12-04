@@ -1,0 +1,711 @@
+/**
+ * Header Responsive Styles
+ * Ensures header is fully responsive on all devices
+ *
+ * @package SME_Insights
+ * @since 1.0.0
+ */
+
+/* ============================================
+   Desktop First - Base Styles (Default)
+   ============================================ */
+
+/* Top Bar - Desktop */
+.top-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    background: var(--bg-dark);
+    color: #fff;
+    font-size: 13px;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.date-weather {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-bar-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Popular Tags - Desktop */
+.popular-tags-section {
+    background: var(--bg-secondary);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.popular-tags-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.popular-tags-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.popular-tags-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.popular-tags-list li {
+    margin: 0;
+}
+
+.popular-tags-list a {
+    font-size: 13px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.popular-tags-list a:hover {
+    color: #ffffff !important;
+}
+
+/* Breaking News - All styles moved to main.css with proper media queries */
+/* Desktop: @media (min-width: 769px) in main.css */
+/* Tablet: @media (max-width: 768px) in main.css */
+/* Mobile: @media (max-width: 480px) in main.css */
+/* This ensures no conflicts between files */
+
+/* Main Header - Desktop */
+.main-header {
+    background: #fff;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.site-logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--accent-primary);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.site-logo:hover {
+    opacity: 0.8;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-btn,
+.subscribe-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe-btn {
+    background: var(--accent-secondary);
+    color: #fff;
+    border-color: var(--accent-secondary);
+}
+
+.search-btn:hover,
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Navigation - Desktop - ONLY show desktop-nav, hide mobile-nav-wrapper */
+@media (min-width: 769px) {
+    /* Hide mobile-nav-wrapper on desktop */
+    .main-header .mobile-nav-wrapper {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+    
+    /* Show desktop-nav on desktop */
+    .main-header .desktop-nav {
+        display: block !important;
+        border-top: 1px solid var(--border-color);
+        padding: 0;
+    }
+}
+
+/* Navigation - Mobile - Hide desktop-nav, show mobile-nav-wrapper */
+@media (max-width: 768px) {
+    /* Hide desktop-nav on mobile */
+    .main-header .desktop-nav {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+    
+    /* Show mobile-nav-wrapper on mobile (when active) */
+    .main-header .mobile-nav-wrapper {
+        display: block;
+    }
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.main-nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-secondary);
+    transition: width 0.3s;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.main-nav a:hover {
+    color: var(--accent-secondary);
+}
+
+/* Mobile Menu Toggle - Hidden on Desktop */
+.mobile-menu-toggle {
+    display: none !important;
+}
+
+/* ============================================
+   Tablet Styles (max-width: 1024px)
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .container-inner {
+        padding: 0 15px;
+    }
+    
+    .top-bar {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+    
+    .popular-tags-wrapper {
+        gap: 10px;
+    }
+    
+    .popular-tags-label {
+        font-size: 11px;
+    }
+    
+    .popular-tags-list {
+        gap: 15px;
+    }
+    
+    .popular-tags-list a {
+        font-size: 12px;
+    }
+    
+    .breaking-news-label {
+        font-size: 11px;
+        margin-right: 15px;
+    }
+    
+    .ticker-item a {
+        font-size: 12px;
+    }
+    
+    .header-content {
+        padding: 12px 0;
+    }
+    
+    .site-logo {
+        font-size: 1.6rem;
+    }
+    
+    .search-btn,
+    .subscribe-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        height: 38px;
+    }
+    
+    .main-nav {
+        gap: 20px;
+    }
+    
+    .main-nav a {
+        font-size: 13px;
+    }
+}
+
+/* ============================================
+   Mobile Styles (max-width: 768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Top Bar - Mobile */
+    .top-bar {
+        padding: 6px 0;
+        font-size: 11px;
+    }
+    
+    .top-bar-content {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .date-weather {
+        justify-content: center;
+    }
+    
+    .top-bar-links {
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Popular Tags - Mobile */
+    .popular-tags-section {
+        padding: 10px 0;
+        background: var(--bg-secondary);
+    }
+    
+    .popular-tags-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .popular-tags-label {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        white-space: nowrap;
+        flex-shrink: 0;
+        padding-right: 5px;
+    }
+    
+    .popular-tags-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        flex: 1;
+        padding-bottom: 5px;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .popular-tags-list::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    
+    .popular-tags-list li {
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .popular-tags-list a {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--text-primary);
+        text-decoration: none;
+        white-space: nowrap;
+        padding: 4px 10px;
+        background: #fff;
+        border-radius: 15px;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+    }
+    
+    .popular-tags-list a:hover,
+    .popular-tags-list a:active {
+        background: var(--accent-secondary);
+        color: #ffffff !important;
+        border-color: var(--accent-secondary);
+        transform: translateY(-1px);
+    }
+    
+    /* Breaking News styles moved to main.css */
+    
+    /* Main Header - Mobile */
+    .main-header {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 1000 !important;
+        width: 100% !important;
+    }
+    
+    .header-content {
+        padding: 10px 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    
+    .site-logo {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+    }
+    
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+    
+    .search-btn,
+    .subscribe-btn {
+        padding: 7px 12px;
+        font-size: 11px;
+        height: 36px;
+        min-width: auto;
+        min-height: 36px;
+        white-space: nowrap;
+    }
+    
+    /* Mobile Menu Toggle - Show on Mobile */
+    .mobile-menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 32px;
+        height: 28px;
+        min-width: 32px;
+        min-height: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        flex-shrink: 0;
+        margin-left: 10px;
+        z-index: 1001;
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 2.5px;
+        background: var(--text-primary);
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    /* Mobile: Hide desktop-nav */
+    .main-header .desktop-nav {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 0;
+    }
+    
+    .main-nav li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .main-nav a {
+        display: block;
+        padding: 15px 0;
+        font-size: 16px;
+        width: 100%;
+        position: relative;
+    }
+    
+    .main-nav a::after {
+        display: none;
+    }
+    
+    .main-nav a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: var(--accent-secondary);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .main-nav a:hover::before,
+    .main-nav a.active::before {
+        opacity: 1;
+    }
+    
+    .main-nav a:hover {
+        padding-left: 10px;
+        color: var(--accent-secondary);
+    }
+}
+
+/* ============================================
+   Small Mobile Styles (max-width: 480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+    .container-inner {
+        padding: 0 12px;
+    }
+    
+    .top-bar {
+        font-size: 10px;
+        padding: 5px 0;
+    }
+    
+    .top-bar-links {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .popular-tags-label {
+        font-size: 10px;
+        padding-right: 3px;
+    }
+    
+    .popular-tags-list {
+        gap: 8px;
+    }
+    
+    .popular-tags-list a {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    /* Breaking News styles moved to main.css */
+    
+    .header-content {
+        padding: 8px 0;
+    }
+    
+    .site-logo {
+        font-size: 1.2rem;
+    }
+    
+    .header-actions {
+        gap: 8px;
+    }
+    
+    .search-btn,
+    .subscribe-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+        height: 34px;
+        min-height: 34px;
+    }
+    
+    .main-nav a {
+        font-size: 15px;
+        padding: 12px 0;
+    }
+    
+    .mobile-menu-toggle {
+        width: 30px;
+        height: 26px;
+        min-width: 30px;
+        min-height: 26px;
+        margin-left: 8px;
+    }
+}
+
+/* ============================================
+   Extra Small Mobile (max-width: 360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+    .site-logo {
+        font-size: 1rem;
+    }
+    
+    .search-btn,
+    .subscribe-btn {
+        padding: 6px 10px;
+        font-size: 10px;
+        height: 32px;
+        min-height: 32px;
+    }
+    
+    .search-btn {
+        display: none; /* Hide search on very small screens */
+    }
+    
+    .mobile-menu-toggle {
+        width: 28px;
+        height: 24px;
+        min-width: 28px;
+        min-height: 24px;
+    }
+}
+
+/* ============================================
+   Landscape Mobile (max-height: 500px)
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .main-header nav {
+        padding: 60px 20px 20px;
+    }
+    
+    .main-nav a {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    .top-bar,
+    .popular-tags-section,
+    .breaking-news-bar,
+    .mobile-menu-toggle,
+    .header-actions {
+        display: none !important;
+    }
+    
+    .main-header {
+        position: static;
+        border-bottom: 1px solid #000;
+    }
+    
+    .main-nav {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
