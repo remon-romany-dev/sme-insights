@@ -24,3 +24,8 @@ yarn-error.log
 
 *.wpress
 *.zip
+
+HANDOVER_NOTES.txt
+POST_HANDOVER_TASKS.md
+debug.log
+*.log
